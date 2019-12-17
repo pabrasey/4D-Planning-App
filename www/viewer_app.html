@@ -1,0 +1,107 @@
+<head>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes" />
+	<meta charset="utf-8">
+
+	<!-- The Viewer CSS -->
+    <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/6.*/style.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+     <div id="loader_container"> <div id="loader"></div> </div>
+    
+	<!-- The Viewer will be instantiated here -->
+	<h1> 4D Planning App </h1>
+	<p>work best on desktop</p>
+
+    <div id="control">
+        <button type="button" class="btn btn-primary" id="previous">PREVIOUS</button>
+        <button type="button" class="btn btn-primary" id="next">NEXT</button>
+
+        <div id="slider">
+            <div id="custom-handle" class="ui-slider-handle"></div>
+        </div>
+        <p id="date"></p>
+        
+        <button type="button" class="btn btn-primary" id="play">PLAY</button>
+        <button type="button" class="btn btn-warning" id="pause" role="button">PAUSE</button>
+        <input type="text" id="play_duration" value="10"> [seconds]
+    </div>
+        
+    <h2> Updated Schedule </h2>
+    
+    <img id="color_code" src="assets/color_code.png" alt="Color Code">
+    
+    <div class="viewer_container">
+        <div class="viewer">
+            <p>Engineering</p>
+            <div id="En_1"></div>
+            <p class="info" id="En_1_info"></p>
+        </div>
+        <div class="viewer">
+            <p>Procurment</p>
+            <div id="Pr_1"></div>
+            <div class="info" id="Pr_1_info"></div>
+        </div>
+        <div class="viewer">
+            <p>Manufacturing</p>
+            <div id="Ma_1"></div>
+            <div class="info" id="Ma_1_info"></div>
+        </div>
+        <div class="viewer">
+            <p>Transport</p>
+            <div id="Tr_1"></div>
+            <div class="info" id="Tr_1_info"></div>
+        </div>
+        <div class="viewer">
+            <p>Erection</p>
+            <div id="Er_1"></div>
+            <div class="info" id="Er_1_info"></div>
+        </div>
+    </div>
+    
+    <!--
+    <h2> Updated Schedule  </h2>
+    <div class="viewer_container">
+        <div class="viewer">
+            <p>Engineering</p>
+            <div id="En_2"></div>
+        </div>
+        <div class="viewer">
+            <p>Procurment</p>
+            <div id="Pr_2"></div>
+        </div>
+        <div class="viewer">
+            <p>Manufacturing</p>
+            <div id="Ma_2"></div>
+        </div>
+        <div class="viewer">
+            <p>Transport</p>
+            <div id="Tr_2"></div>
+        </div>
+        <div class="viewer">
+            <p>Erection</p>
+            <div id="Er_2"></div>
+        </div>
+    </div>
+    -->
+
+    <!-- Autodesk Forge -->
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/6.*/viewer3D.min.js"></script>
+    <script src="js/PropertyInspectorExtension.js"></script>
+    
+    <!-- Jquery -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <!-- App -->
+    <script src="js/viewer.js"></script>
+    <script type="text/javascript" src="data/baseline_schedule.json"></script>
+    <script type="text/javascript" src="data/schedule_delay1.json"></script>
+    <script type="text/javascript" src="js/simulation.js"></script>
+
+</body>
